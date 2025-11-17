@@ -12,5 +12,7 @@ public class h3_main{
         for (int y=0;y<einheiten[0].length;y++){
             einheiten[1][y]=einheiten[0][y]/100;
         }
+
+
     }
 }
