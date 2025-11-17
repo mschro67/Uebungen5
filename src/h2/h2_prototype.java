@@ -29,8 +29,10 @@ public class h2_prototype {
                 b *= 10;
             }
             a[8] = n - z * b;
-            System.out.println("a: " + a[0] + "," + a[1] + "," + a[2] + "," + a[3] + "," + a[4] + "," + a[5] + "," + a[6] + "," + a[7] + "," + a[8]);
         }
-        System.out.println("a: " + a[0] + "," + a[1] + "," + a[2] + "," + a[3] + "," + a[4] + "," + a[5] + "," + a[6] + "," + a[7] + "," + a[8]);
+        System.out.print("a: ");
+        for (int y = 0; y < a.length; y++) {
+            System.out.print(a[y] + " ");
+        }
     }
 }
