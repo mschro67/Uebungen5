@@ -2,11 +2,17 @@
 
 package h3;
 
+import java.util.Scanner;
+
 public class h3_main {
     public static void main(String[] args) {
-        int input=3502;
+        System.out.print("Input: ");
+        Scanner s=new Scanner(System.in);
+
+        int input=Integer.parseInt(s.nextLine());
         int[][] einheiten = {{50000,20000,10000,5000,2000,1000,500,200,100,50,20,10,5,2,1},new int[15]};
 
+        s.close();
         double euro=input/100;
 
         System.out.println("input: "+input+"ct ~= "+euro+"€");
