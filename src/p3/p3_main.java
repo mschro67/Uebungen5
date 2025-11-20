@@ -17,13 +17,7 @@ public class p3_main{
     }
 
     public static void main(String[] args){
-        int[][] backup=new int[3][3];
         int[][] matrix={{1,2,3},{4,5,6},{7,8,9}};
-        for (int x=0;x<matrix.length;x++){
-            for (int y=0;y<matrix[x].length;y++){
-                backup[x][y]=matrix[x][y];
-            }
-        }
 
         for (int x=0;x<matrix.length;x++){
             for (int y=0;y<matrix[x].length;y++){
@@ -31,7 +25,11 @@ public class p3_main{
             }
         }
         display(matrix,"a");
-        matrix=backup;
+        for (int x=0;x<matrix.length;x++){
+            for (int y=0;y<matrix[x].length;y++){
+                matrix[x][y]--;
+            }
+        }
 
         int summe=0;
         for (int x=0;x<matrix.length;x++){
@@ -43,8 +41,12 @@ public class p3_main{
         System.out.println(summe);
         System.out.println();
 
-        int[][] m={{backup[2][0],backup[1][0],backup[0][0]},{backup[2][1],backup[1][1],backup[0][1]},{backup[2][2],backup[1][2],backup[0][2]}};
-        matrix=m;
-        display(matrix,"c");
+        int[][] m = new int[matrix.length][matrix[0].length];
+        for (int x=0;x<matrix.length;x++){
+            for (int y=0;y<matrix[x].length;y++){
+                m[y][matrix.length-1-x]=matrix[x][y];
+            }
+        }
+        display(m,"c");
     }
 }
