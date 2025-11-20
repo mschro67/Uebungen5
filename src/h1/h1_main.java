@@ -4,9 +4,9 @@ package h1;
 
 public class h1_main{
     public static void main(String[] args){
-        int[] myArray={5,6,7,10};
+        int[] myArray={5,6,7,10,12,23,56};
 
-        int[] x={0,0,0,0};
+        int[] x=new int[myArray.length];
         int z=0;
 
         for (int y=myArray.length-1;y>=0;y--){
